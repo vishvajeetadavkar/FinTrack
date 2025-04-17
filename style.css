@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+.navbar {
+  background: #333;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.navbar .active {
+  background: #555;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 20px;
+}
+
+input, button, select {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+canvas {
+  margin-top: 20px;
+  background-color: white;
+}
+
+body.dark canvas {
+  background-color: #222;
+}
+
+
+html, body {
+  height: 100%;
+  overflow: auto;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 70vh;
+  margin-top: 0;
+  margin-bottom: 10px;
+}

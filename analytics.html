@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Analytics</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="analytics.html" class="active">Analytics</a>
+    <a href="flowchart.html">Flowchart</a>
+    <button id="themeToggle">🌙</button>
+  </div>
+  <div class="container">
+    <h2>Expense Distribution</h2>
+    <label for="monthSelect">Select Month:</label>
+    <select id="monthSelect"></select>
+    <canvas id="pieChart" width="400" height="400"></canvas>
+  </div>
+  <script src="analytics.js"></script>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+    themeToggle?.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
